@@ -1,3 +1,4 @@
+![Travis](https://travis-ci.com/singcl/react-hooks-todolist.svg?branch=master)
 # React Hooks 实现 todoList 程序 
 React Hooks 是 React 16.8及以上版本新增的功能。该功能可以让React函数组件与类组件一样具有状态和生命周期。这使得我们用简单的函数组件就可以完成复杂的逻辑操作。  
 React Hooks 是一组简单的 API，这些API只能运行在函数组件当中，不能运行在类组件中。本程序主要用到了以下API：  
