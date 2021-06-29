@@ -1,0 +1,23 @@
+{
+  "name": "react-hooks-server",
+  "version": "1.0.0",
+  "description": "react hooks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "singcl",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.1",
+    "cross-env": "^5.1.1",
+    "express": "^4.16.2",
+    "lru-cache": "^4.1.1",
+    "route-cache": "0.4.3",
+    "serve-favicon": "^2.5.0"
+  }
+}
