@@ -35,7 +35,5 @@ env:
 deploy:
   provider: script
   script: deploy.sh
-  on:
-    branch: master
 
 after_script:
