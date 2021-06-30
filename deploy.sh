@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "正在压缩, 请稍后..."
-cp ./build ./server
+mv ./build ./server
 tar -zcvf react-hooks-todolist.tar.gz ./server ./README.md ./build_production.sh
 
 echo "上传中..."
