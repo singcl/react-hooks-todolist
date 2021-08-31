@@ -2,7 +2,7 @@ language: node_js
 # nodejs版本
 node_js:
   - "12"
-
+sudo: required               # 管理员权限，用于安装sshpass
 # Travis-CI Caching
 cache:
   directories:
@@ -13,7 +13,7 @@ before_install:
   - node -v
   - npm -v
   - git branch
-  - chmod +x deploy.sh
+  # - chmod +x deploy.sh
 
 # S: Build Lifecycle
 install:
@@ -34,7 +34,16 @@ env:
   global:
     # 我将其添加到了travis-ci的环境变量中
 
+before_deploy:
+  - sudo apt-get install sshpass  # 安装sshpass
+
+deploy:
+  provider: script       # 选择实验性质的script deploy
+  script: deploy.sh # 需要在发布阶段执行的脚本
+  skip_cleanup: true     # 重要, travis ci默认会在发布阶段清理git管理的文件范围外的所有文件，不写此行会导致脚本找不到编译后的结果
+  on:
+    branch: master       # 当master分支有push事件的时候执行deploy流程
+
 after_success:
-  - "./deploy.sh"
 
 after_script:
