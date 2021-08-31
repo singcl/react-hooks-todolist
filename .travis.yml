@@ -9,6 +9,7 @@ cache:
     - node_modules
 
 before_install:
+  sudo apt-get update
   - node -v
   - npm -v
   - git branch
