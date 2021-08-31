@@ -12,6 +12,7 @@ before_install:
   - node -v
   - npm -v
   - git branch
+  - chmod +x deploy.sh
 
 # S: Build Lifecycle
 install:
