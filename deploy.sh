@@ -5,5 +5,5 @@ tar -zcvf react-hooks-todolist.tar.gz ./server ./README.md ./build_production.sh
 
 echo "上传中..."
 
-sshpass -p ${password} scp ./react-hooks-todolist.tar.gz  ${user}@${host}:/home/quzhanxiang/react-hooks-todolist/
-sshpass -p ${password} ssh ${user}@${host} "cd /home/quzhanxiang/react-hooks-todolist/ && tar -xzvf react-hooks-todolist.tar.gz && bash build_production.sh"
+sshpass -p ${password} scp -o StrictHostKeyChecking=no ./react-hooks-todolist.tar.gz  ${user}@${host}:/home/quzhanxiang/react-hooks-todolist/
+sshpass -p ${password} ssh -o StrictHostKeyChecking=no ${user}@${host} "cd /home/quzhanxiang/react-hooks-todolist/ && tar -xzvf react-hooks-todolist.tar.gz && bash build_production.sh"

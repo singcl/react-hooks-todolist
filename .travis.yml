@@ -39,7 +39,7 @@ before_deploy:
 
 deploy:
   provider: script       # 选择实验性质的script deploy
-  script: deploy.sh # 需要在发布阶段执行的脚本
+  script: deploy.sh      # 需要在发布阶段执行的脚本
   skip_cleanup: true     # 重要, travis ci默认会在发布阶段清理git管理的文件范围外的所有文件，不写此行会导致脚本找不到编译后的结果
   on:
     branch: master       # 当master分支有push事件的时候执行deploy流程
